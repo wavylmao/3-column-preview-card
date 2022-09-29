@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  #root {
+    position: relative;
+    right: 320px;
+  }
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+button {
+  font-family: "Lexend Deca", sans-serif;
+  border: 2px white solid;
+}
+
+.sedanPillButton:hover {
+  background-color: hsl(31, 77%, 52%);
+  color: white;
+}
+
+.suvPillButton:hover {
+  background-color: hsl(184, 100%, 22%);
+  color: white;
+}
+
+.luxuryPillButton:hover {
+  background-color: hsl(179, 100%, 13%);
+  color: white;
+}
