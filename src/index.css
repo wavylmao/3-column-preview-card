@@ -3,11 +3,60 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  min-height: 100vh;
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
 }
 
 @media (min-width: 1024px) {
@@ -17,30 +66,30 @@ body {
   }
 }
 
-h1 {
-  font-family: "Big Shoulders Display", cursive;
+h2 {
+  font-family: "Big Shoulders Display", sans-serif;
 }
 
 p {
   font-family: "Lexend Deca", sans-serif;
 }
 
-button {
+a {
   font-family: "Lexend Deca", sans-serif;
   border: 2px white solid;
 }
 
-.sedanPillButton:hover {
+.sedanPill:hover {
   background-color: hsl(31, 77%, 52%);
   color: white;
 }
 
-.suvPillButton:hover {
+.suvPill:hover {
   background-color: hsl(184, 100%, 22%);
   color: white;
 }
 
-.luxuryPillButton:hover {
+.luxuryPill:hover {
   background-color: hsl(179, 100%, 13%);
   color: white;
 }
